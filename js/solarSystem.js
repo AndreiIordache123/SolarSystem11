@@ -11,7 +11,7 @@ document.body.appendChild(renderer.domElement);
 const textureLoader = new THREE.TextureLoader();
 
 // NOTE Import all textures
-const starTexture = textureLoader.load("./image/stars.jpg");
+
 const sunTexture = textureLoader.load("./image/sun.jpg");
 const mercuryTexture = textureLoader.load("./image/mercury.jpg");
 const venusTexture = textureLoader.load("./image/venus.jpg");
@@ -109,16 +109,7 @@ window.addEventListener("click", (event) => {
 });
 
 // NOTE Screen background
-const cubeTextureLoader = new THREE.CubeTextureLoader();
-const cubeTexture = cubeTextureLoader.load([
-  starTexture,
-  starTexture,
-  starTexture,
-  starTexture,
-  starTexture,
-  starTexture,
-]);
-scene.background = cubeTexture;
+
 
 // NOTE Perspective Camera
 const camera = new THREE.PerspectiveCamera(
