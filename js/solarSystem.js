@@ -178,7 +178,10 @@ const genratePlanet = (size, planetTexture, x, ring) => {
   const planetObj = new THREE.Object3D();
   planet.position.set(x, 0, 0);
   if (ring) {
-    const ringGeo = new THREE.RingGeometry(ring.innerRadius, ring.outerRadius, 32);
+    const ringGeo = new THREE.RingGeometry(
+      ring.innerRadius, 
+      ring.outerRadius, 
+      32);
     const ringMat = new THREE.MeshBasicMaterial({
       map: ring.ringmat,
       side: THREE.DoubleSide,
